@@ -65,7 +65,7 @@ Cell inventory (final state of `modelo3d.ipynb`):
 - [ ] **Step 1: Create dev environment**
 
 ```bash
-cd ~/projects/modelo3d && python3 -m venv .venv && . .venv/bin/activate && pip install pytest nbformat trimesh pymeshfix manifold3d pillow numpy ruff
+cd ~/projects/modelo3d && python3 -m venv .venv && . .venv/bin/activate && pip install pytest nbformat trimesh pymeshfix manifold3d pillow numpy ruff gradio
 ```
 
 Expected: clean install. Add `.venv/` to `.gitignore` (create file with `.venv/\n__pycache__/\n*.stl\n*.glb\n`).
@@ -880,8 +880,8 @@ def test_app_labels_are_spanish():
 
 def test_app_never_shows_raw_traceback():
     src = _src("app")
-    assert "friendly_error" in src
-    assert "raise" not in src.split("def run_pipeline")[1].split("except ValueError")[0]
+    assert "friendly_error(exc)" in src
+    assert "print(traceback" not in src
 ```
 
 And add to `tests/test_engine_logic.py`:
@@ -1163,7 +1163,7 @@ Standard MIT text, `Copyright (c) 2026 modelo3d contributors`.
 
 - [ ] **Step 2: Write README.md (Spanish)**
 
-Full content: what it is; 3-step usage (enable T4 → run setup → use app); Open-in-Colab badge pointing at `https://colab.research.google.com/github/<OWNER>/<REPO>/blob/main/modelo3d.ipynb`; photo guide (same tips as in-app); "Para desarrolladores" section documenting `pip install pytest nbformat trimesh pymeshfix manifold3d pillow numpy ruff` and `python -m pytest tests/ -v`; manual Colab T4 protocol checklist (object, pet, bust; multiview happy path; single-usable-view fallback; session-death recovery).
+Full content: what it is; 3-step usage (enable T4 → run setup → use app); Open-in-Colab badge pointing at `https://colab.research.google.com/github/<OWNER>/<REPO>/blob/main/modelo3d.ipynb`; photo guide (same tips as in-app); "Para desarrolladores" section documenting `pip install pytest nbformat trimesh pymeshfix manifold3d pillow numpy ruff gradio` and `python -m pytest tests/ -v`; manual Colab T4 protocol checklist (object, pet, bust; multiview happy path; single-usable-view fallback; session-death recovery).
 
 After `git remote add origin <url>` exists, replace `<OWNER>/<REPO>` mechanically:
 
