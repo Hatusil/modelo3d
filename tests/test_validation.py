@@ -41,3 +41,9 @@ def test_friendly_error_hides_internals(core):
     err = core["friendly_error"](RuntimeError("CUDA malloc 0xdeadbeef secret"))
     assert "0xdeadbeef" not in err
     assert err  # non-empty Spanish message
+
+
+def test_friendly_error_passes_repair_message(core):
+    exc = ValueError("El modelo salió con agujeros que no pudimos reparar. Probá generar de nuevo con otra foto.")
+    msg = core["friendly_error"](exc)
+    assert "agujeros" in msg
