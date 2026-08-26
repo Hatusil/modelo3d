@@ -50,8 +50,8 @@ python -m pytest tests/ -v
 | 3 | `core` | Validación de fotos y catálogo de errores |
 | 4 | `core` | Núcleo geométrico: reparar, escalar, base, exportar |
 | 5 | `core` | Selección de motor y reintento por OOM |
-| 6 | `app`, `core` | Aplicación Gradio |
-| 7 | `selftest`, `core` | Modo prueba con imagen de ejemplo |
+| 6 | `app` | Aplicación Gradio |
+| 7 | `selftest` | Modo prueba con imagen de ejemplo |
 
 ### Protocolo manual Colab T4
 

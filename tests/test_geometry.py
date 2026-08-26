@@ -1,6 +1,6 @@
 import numpy as np
-import trimesh
 import pytest
+import trimesh
 
 
 def broken_sphere() -> trimesh.Trimesh:

@@ -1,6 +1,6 @@
 import numpy as np
-from PIL import Image
 import pytest
+from PIL import Image
 
 
 def make_img(w=512, h=512, color=(30, 30, 30)):

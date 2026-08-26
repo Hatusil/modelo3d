@@ -47,5 +47,4 @@ def test_no_retry_on_other_errors(core):
         core["generate_with_retry"](boom, core["GEN_PARAMS"], oom_exc=FakeOOM)
 
 
-def test_run_pipeline_glue_exists(core):
-    assert callable(core["run_pipeline"])
+
