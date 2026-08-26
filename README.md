@@ -2,7 +2,7 @@
 
 Convertí una foto (o tres vistas del mismo objeto) en un archivo **STL listo para imprimir**, sin saber nada de programación.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<OWNER>/<REPO>/blob/main/modelo3d.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Hatusil/modelo3d/blob/main/modelo3d.ipynb)
 
 ## Cómo usarlo
 
